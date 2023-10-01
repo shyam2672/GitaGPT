@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: gitagpt development
-          image: gitagpt:1.0
+          image: gitagpt 
           ports:
             - containerPort: 8000
