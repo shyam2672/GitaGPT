@@ -1,6 +1,3 @@
-###########################################################
-# Rename the file extension to ".yml" (remove "_") to enable
-###########################################################
 
 name: Docker Pipeline
 
@@ -19,9 +16,10 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: docker build gitagpt
       run: |
-        docker build -t gitagpt:1.0 .
+        docker build -t gitagpt .
   
     - name: docker push
       run: |
-        docker push gita_gpt/gitagpt:1.0
+        docekr tag gitagpt DOCKER_USER/gitagpt
+        docker push DOCKER_USER/gitagpt
       
