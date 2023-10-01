@@ -2,7 +2,8 @@
 
 
 echo "Step 1: Running Docker Container..."
-docker run -d  -p 8000:8000 gitagpt:1.0
+
+docker run -d  -p 8000:8000  shyam2672/gitagpt
 
 echo "Step 2: Displaying Running Containers..."
 docker ps

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitagpt development
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: gitagpt development
+  template:
+    metadata:
+      labels:
+        app: gitagpt development
+    spec:
+      containers:
+        - name: gitagpt development
+          image: gitagpt:1.0
+          ports:
+            - containerPort: 8000
